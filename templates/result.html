@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+  <style type="text/css">
+  body {
+    color: purple;
+    background-color: #d8da3d }
+  </style>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Spam Detector For SMS Messages</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+	<div class="results">
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;">Spam</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:blue;">Not a Spam (It is a Ham)</h2>
+	{% endif %}
+
+	 <div class='footer'>
+           <div class="contact">
+	       
+               <a target="_blank" href="https://github.com/shubham6692"><i class="fa fa-github-square" style="font-size:36px"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/shubham6692"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+           </div>
+		</br>
+		</br>
+           <p class='footer-description'>Made by Shubham Agarwal</p>
+       </div>
+
+</body>
+</html>
